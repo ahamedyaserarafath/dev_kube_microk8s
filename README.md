@@ -1,27 +1,30 @@
-Kubernetes for Dev guys
------------------------
-Introduction
+# Kubernetes - Python - Microk8s
+# Deploying the Kubernetes(Microk8s) in linux(ubuntu - 18.04) machine for the use of in house development. 
+- [Introduction](#Introduction)
+- [Pre-requisites](#pre-requisites)
+- [Installation and commands](#Installation/commands)
 
-In this README, we will deploy a microk8s in linux(ubuntu - 18.04)/MacOs(not tested)and will create the docker image and push it local registry and  deploy the same docker in microk8s kube.
+# Introduction
+we will deploy a microk8s in linux(ubuntu - 18.04)/MacOs(not tested)and will create the docker image and push it local registry and  deploy the same docker in microk8s kube.
 
-Pre-requisites
+# Pre-requisites
+Before we get started using the script. 
+* Ensure you have installed docker.
+* Snap need to be installed.
+* Python need to be installed.
 
-Docker need to be installed and running.
-Snap need to be installed.
-python need to be installed.
-
-Userfull commands and its reference
-1. python ./simple_kube.py --install kube
-
-It will install microk8s and enabled dns,dashboard and registry
-
-2. python ./simple_kube.py --start/stop/status kube
+# Installation/commands
+Below command will install microk8s and enabled dns,dashboard and registry
+```python ./simple_kube.py --install kube```
 
 Varies command to stop,start and check the status of microk8s.
 
-3. python ./simple_kube.py --list-pods kube
+```python ./simple_kube.py --start/stop/status kube```
 
 List the pods running in microk8s
+
+```python ./simple_kube.py --list-pods kube```
+
 
 4. python ./simple_kube.py --list-deployment kube
 
