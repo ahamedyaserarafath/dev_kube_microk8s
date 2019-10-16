@@ -1,0 +1,63 @@
+Kubernetes for Dev guys
+-----------------------
+Introduction
+
+In this README, we will deploy a microk8s in linux(ubuntu - 18.04)/MacOs(not tested)and will create the docker image and push it local registry and  deploy the same docker in microk8s kube.
+
+Pre-requisites
+
+Docker need to be installed and running.
+Snap need to be installed.
+python need to be installed.
+
+Userfull commands and its reference
+1. python ./simple_kube.py --install kube
+
+It will install microk8s and enabled dns,dashboard and registry
+
+2. python ./simple_kube.py --start/stop/status kube
+
+Varies command to stop,start and check the status of microk8s.
+
+3. python ./simple_kube.py --list-pods kube
+
+List the pods running in microk8s
+
+4. python ./simple_kube.py --list-deployment kube
+
+List the deployment running in microk8s
+
+5. python ./simple_kube.py --create-deployment <yaml_path>
+
+It will create the deployment in microk8s.
+
+6. python ./simple_kube.py --create-docker <Docker_file_path>
+
+It will create the docker images and kept locally.
+
+
+7. python ./simple_kube.py --create-push-docker <Docker_file_path>
+
+It will create the docker images and push it to local registry which is enabled in microk8s.
+
+8. python ./simple_kube.py --status-docker-image <imagename>
+
+It will show the status docker images.
+
+9. python ./simple_kube.py --remove-docker-image <imagename>
+
+It will remove the docker images.
+
+10. python ./simple_kube.py --docker-image list
+
+It will list the docker images.
+
+11. python ./simple_kube.py --create-push-deploy <docker_image_name>
+
+It will create the docker images and push it to local registry and deploy the same in microk8s.
+Note: The above command need to run where the dockerfile exisits.
+
+
+
+
+
